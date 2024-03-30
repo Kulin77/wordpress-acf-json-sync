@@ -20,7 +20,7 @@ class ACF_Hooks {
      *
      * @return string The path of acf-json directory.
      */
-    public function acf_json_save_point($path): string {
+    public function acf_json_save_point(string $path): string {
 
         // Update the save location to your desired path
         $path = plugin_dir_path(__DIR__) . 'acf-json';
@@ -31,7 +31,8 @@ class ACF_Hooks {
     /**
      * Change the acf plugin json load path.
      *
-     * @return array    The path of acf-json directory.
+     * @param string[] $paths
+     * @return array<mixed>    The path of acf-json directory.
      */
     public function acf_json_load_point(): array {
 
