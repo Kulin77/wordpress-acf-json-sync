@@ -32,9 +32,9 @@ class ACF_Hooks {
      * Change the acf plugin json load path.
      *
      * @param string[] $paths
-     * @return array<mixed>    The path of acf-json directory.
+     * @return string[]    The path of acf-json directory.
      */
-    public function acf_json_load_point(): array {
+    public function acf_json_load_point(array $paths): array {
 
         // Add your custom save path to the array
         $paths[] = plugin_dir_path(__DIR__) . 'acf-json';
